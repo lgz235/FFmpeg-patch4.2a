@@ -2719,7 +2719,7 @@ index 0000000..ded8a5b
 +    Dimensions dim = blob->GetDims(blob_ctx);
 +    const int out_blob_h = (int)dim.dims[2];
 +    const int out_blob_w = (int)dim.dims[3];
-+    const int coords = 4, num = 3, classes = 1;
++    const int coords = 4, num = 3, classes = 9;
 +    const float anchors[] = {10.0, 13.0, 16.0,  30.0,  33.0, 23.0,  30.0,  61.0,  62.0,
 +                             45.0, 59.0, 119.0, 116.0, 90.0, 156.0, 198.0, 373.0, 326.0};
 +    int side = out_blob_h;

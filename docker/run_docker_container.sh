@@ -47,7 +47,7 @@ then
     IMAGE_NAME=ffmpeg-video-analytics-package:latest
 fi
 
-xhost local:root
+#xhost local:root
 sudo docker run -it --privileged --net=host \
     -v ~/.Xauthority:/root/.Xauthority \
     -v /tmp/.X11-unix/:/tmp/.X11-unix/ \

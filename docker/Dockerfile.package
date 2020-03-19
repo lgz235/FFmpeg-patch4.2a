@@ -422,13 +422,19 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y -q --no-
 ADD patch /root/patch
 ARG FFMPEG_VER=n4.2
 ARG FFMPEG_REPO=https://github.com/FFmpeg/FFmpeg/archive/${FFMPEG_VER}.tar.gz
-ARG FFMPEG_VA_PATCH_V04_001=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0001-ffmpeg-video-analytics-v0.4-release.patch
-ARG FFMPEG_VA_PATCH_V04_002=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0002-Use-a-common-way-for-param-tags.patch
-ARG FFMPEG_VA_PATCH_V04_003=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0003-C-API-related-changes-for-OpenVINO-2020.1.patch
+ARG FFMPEG_VA_PATCH_V04_001=https://raw.githubusercontent.com/lgz235/FFmpeg-patch4.2a/v0.4.4/patches/0001-ffmpeg-video-analytics-v0.4-release.patch
+ARG FFMPEG_VA_PATCH_V04_002=https://raw.githubusercontent.com/lgz235/FFmpeg-patch4.2a/v0.4.4/patches/0002-Use-a-common-way-for-param-tags.patch
+ARG FFMPEG_VA_PATCH_V04_003=https://raw.githubusercontent.com/lgz235/FFmpeg-patch4.2a/v0.4.4/patches/0003-C-API-related-changes-for-OpenVINO-2020.1.patch
+#ARG FFMPEG_VA_PATCH_V04_001=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0001-ffmpeg-video-analytics-v0.4-release.patch
+#ARG FFMPEG_VA_PATCH_V04_002=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0002-Use-a-common-way-for-param-tags.patch
+#ARG FFMPEG_VA_PATCH_V04_003=https://raw.githubusercontent.com/VCDP/FFmpeg-patch/ffmpeg4.2_va/patches/0003-C-API-related-changes-for-OpenVINO-2020.1.patch
 
-ARG FFMPEG_MA_RELEASE_VER=0.4.1
-ARG FFMPEG_MA_RELEASE_URL=https://github.com/VCDP/FFmpeg-patch/archive/v${FFMPEG_MA_RELEASE_VER}.tar.gz
-ARG FFMPEG_MA_PATH=/home/FFmpeg-patch-${FFMPEG_MA_RELEASE_VER}
+#ARG FFMPEG_MA_RELEASE_VER=0.4.1
+#ARG FFMPEG_MA_RELEASE_URL=https://github.com/VCDP/FFmpeg-patch/archive/v${FFMPEG_MA_RELEASE_VER}.tar.gz
+#ARG FFMPEG_MA_PATH=/home/FFmpeg-patch-${FFMPEG_MA_RELEASE_VER}
+ARG FFMPEG_MA_RELEASE_VER=0.4.4
+ARG FFMPEG_MA_RELEASE_URL=https://github.com/lgz235/FFmpeg-patch4.2a/archive/v0.4.4.tar.gz
+ARG FFMPEG_MA_PATH=/home/FFmpeg-patch4.2a-${FFMPEG_MA_RELEASE_VER}
 RUN wget -O - ${FFMPEG_MA_RELEASE_URL} | tar xz
 
 # Compile FFmpeg

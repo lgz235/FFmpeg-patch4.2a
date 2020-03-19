@@ -24,7 +24,7 @@ BASEDIR=$(dirname "$0")
 sudo docker build --target build -f ${BASEDIR}/${dockerfile} --network=host \
     -t "ffmpeg-video-analytics-$build_type:build" "$BASEDIR" $(env | grep -E '_(REPO|VER)=' | sed 's/^/--build-arg /')
 
-sudo docker build -f ${BASEDIR}/${dockerfile} --network=host -t lgz235/ffmpeg-video-analytics-$build_type:v1.2 \
+sudo docker build -f ${BASEDIR}/${dockerfile} --network=host -t lgz235/ffmpeg-video-analytics-$build_type:v1.5 \
     --build-arg  \
     --build-arg  \
     ${BASEDIR}
