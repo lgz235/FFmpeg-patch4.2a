@@ -449,11 +449,11 @@ RUN cd /home/FFmpeg && \
     make install DESTDIR="/home/build"
 
 # Clean up after build
-RUN rm -rf /home/build/usr/include && \
-    rm -rf /home/build/usr/share/doc && \
-    rm -rf /home/build/usr/share/gtk-doc && \
-    rm -rf /home/build/usr/share/man && \
-    find /home/build -name "*.a" -exec rm -f {} \;
+#RUN rm -rf /home/build/usr/include && \
+#    rm -rf /home/build/usr/share/doc && \
+#    rm -rf /home/build/usr/share/gtk-doc && \
+#    rm -rf /home/build/usr/share/man && \
+#    find /home/build -name "*.a" -exec rm -f {} \;
 
 FROM ubuntu:18.04
 LABEL Description="This is the base image for FFMPEG & openvino Ubuntu 18.04 LTS"
